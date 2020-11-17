@@ -1,9 +1,6 @@
 <%= simple_form_for(task) do |f| %>
   <%= f.input :title %>
   <%= f.input :details %>
-  <%= f.input :completed, as: :boolean, input_html: {checked: true}, label: "Completed?" %>
+  <%= f.input :completed, as: :boolean, label: "Completed?" %>
   <%= f.submit %>
 <% end %>
-
-
- <!-- as: :boolean, checked_value: true, unchecked_value: false, -->
