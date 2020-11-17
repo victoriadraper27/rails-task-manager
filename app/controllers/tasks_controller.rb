@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
-before_action :find_task, except:[:index, :new, :create]
+  before_action :find_task, except: [:index, :new, :create]
+
   def index
     @tasks = Task.all
   end
@@ -27,7 +28,7 @@ before_action :find_task, except:[:index, :new, :create]
     redirect_to tasks_path
   end
 
-private
+  private
 
   def find_task
     @task = Task.find(params[:id])
